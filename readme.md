@@ -6,7 +6,7 @@
 
 > WebRTC SDK Upgraded! ES6, new camera control and 100x less code than v1.
 
-The following demo uses PubNub for signaling to transfer the metadata and establish the peer-to-peer connection. Once the connection is established, the video and voice runs on public Google STUN/TURN servers.
+The following demo uses PubNub for signaling to transfer the metadata and establish the peer-to-peer connection. Once the connection is established, the video and voice runs on Xirsys version 3 STUN/TURN servers.
 Keep in mind, PubNub can provide the signaling for WebRTC, and requires you to combine it with a hosted WebRTC solution. For more detail on what PubNub does, and what PubNub doesn’t do with WebRTC, check out this article: https://support.pubnub.com/support/solutions/articles/14000043715-does-pubnub-provide-webrtc-and-video-chat-
 
 At PubNub we believe simplicity is essential for our SDK usability.
@@ -16,7 +16,8 @@ The ideas of simplicity should span all platforms and devices too and
 that's why we also support **Android** WebRTC mobile calling
 with compatibility for iOS native Objective-C based WebRTC SDK.
 This simple developer WebRTC SDK is powered by
-[PubNub Data Stream Network](https://www.pubnub.com/).
+[PubNub Data Stream Network](https://www.pubnub.com/) &
+[Xirsys WebRTC Infrastructure](https://www.xirsys.com/).
 
 ### Supported WebRTC Features
 
