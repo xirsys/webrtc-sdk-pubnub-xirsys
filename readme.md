@@ -104,6 +104,28 @@ phone.receive(function(session){
 });
 ```
 
+##### Adding Xirsys Account Information
+
+```javascript
+function dial(number) {
+    $.ajax({      
+        type: 'PUT',
+        //Replace "yourChannel" with your actual Xirsys channel ID
+        url: 'https://ws.xirsys.com/_turn/yourChannel/',      
+        headers: {
+            //Replace "ident" and "secret" with your actual Xirsys ident and secret key
+        'Authorization': 'Basic ' + btoa('ident:secret')
+     },        
+        success: function(res) {
+            // Dial Number
+            phone.dial(number, res.v.iceServers);
+            // Show Connecting Status
+            set_icon('send');
+        },        
+    });       
+}
+```
+
 ### Simple WebRTC Walkthrough
 
 Next we will start with a copy/paste example of our SDK.
