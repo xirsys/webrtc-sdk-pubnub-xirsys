@@ -202,21 +202,17 @@ function set_icon(icon) {
 // Start Phone Call with Xirsys STUN and TURN servers
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 function dial(number) {
-    //var servers;      
     $.ajax({      
-        type: 'PUT',     
-        url: 'https://us.xirsys.com/_turn/firstchannel/',      
+        type: 'PUT',
+        //Replace "yourChannel" with your actual Xirsys channel ID
+        url: 'https://ws.xirsys.com/_turn/yourChannel/',      
         headers: {
-       'Authorization': 'Basic ' + btoa('jerfun:d8e9e4bc-46f8-11e7-b7f6-a7f95cfe68b0')
+            //Replace "ident" and "secret" with your actual Xirsys ident and secret key
+        'Authorization': 'Basic ' + btoa('ident:secret')
      },        
         success: function(res) {
-            //servers = res.v.iceServers;  
             // Dial Number
             phone.dial(number, res.v.iceServers);
-
-            // No Duplicate Dialing Allowed
-            //if (!session) return;
-
             // Show Connecting Status
             set_icon('send');
         },        
